@@ -32,15 +32,6 @@ public class Formatif3AMB {
         System.out.print(question + "\t: ");
     }
 
-    /**
-     * Prints a line
-     */
-    private void printLine(int numberOfLine ){
-        // Default parameter
-        numberOfLine = numberOfLine != 0 ? numberOfLine : numberOfLine;
-
-    }
-
     /*              INPUTS              */
     // @TODO Test inputs and ensure quality.
 
@@ -148,11 +139,14 @@ public class Formatif3AMB {
         long rectangleArea = computeRectangleArea(length, height);
         long rectanglePerimeter = computeRectanglePerimeter(length, height);
 
+
+        //  Make the string here
+        String message = "The rectangle has a length of " + length + " and a height of " + height + ".\n";
+        message += "The rectangle is : " + color + ".\n";
+        message += "It area is : " + rectangleArea + ".\n";
+        message += "It perimeter is : " + rectanglePerimeter + ".\n";
         //  Print the info
-        System.out.println("The rectangle has a length of " + length + " and a height of " + height + ".");
-        System.out.println("The rectangle is : " + color + ".");
-        System.out.println("It area is : " + rectangleArea + ".");
-        System.out.println("It perimeter is : " + rectanglePerimeter + ".");
+        System.out.println(message);
     }
 
     /**
